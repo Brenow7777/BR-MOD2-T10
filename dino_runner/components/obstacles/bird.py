@@ -1,12 +1,12 @@
 import random
 
-from dino_runner.components.obstacles.obstacle import Obstacle
 from dino_runner.utils.constants import BIRD
+from dino_runner.components.obstacles.obstacle import Obstacle
+
 
 class Bird(Obstacle):
-    def __init__(self, image):
-        self.type = 0
-        super().__init__(image, self.type)
+    def __init__(self):
+        super().__init__(BIRD, 0)
         
         if random.randint(0, 1) == 0:
             self.rect.y = 277
