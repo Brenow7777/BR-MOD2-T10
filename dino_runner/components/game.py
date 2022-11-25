@@ -62,12 +62,12 @@ class Game:
         self.player.update(user_input)
         self.obstacle_manager.update(self)
         self.update_score()
-        self.power_up_manager.update(self.score, self.game_speed, self.player)
+        self.power_up_manager.update(self)
 
     def update_score(self):
         self.score += 1
-        if self.score % 100 == 0:
-            self.game_speed *= 1.05 
+        if self.score % 20 == 0:
+            self.game_speed *= 1.02 
 
     def draw(self):
         self.clock.tick(FPS)
